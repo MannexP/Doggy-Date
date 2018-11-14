@@ -5,60 +5,83 @@ mongoose.connect(process.env.MONGODB_URI)
 const Dog = require('../models/Dog')
 const Date = require('../models/Date')
 
-const mars = new Date({
-  title: 'Fly to Mars',
-  description: "Earth isn't Red enough. Let's move to a new planet"
+const date1 = new Date({
+    date: 'November 3, 2020',
+    location: 'Old Fourth Ward',
+    duration: '45mins'
 })
 
-const tesla = new Date({
-  title: 'Build a Car',
-  description: "Gas is too expensive. I'm gonna build a car that doesn't need gas"
+const date2 = new Date({
+    date: 'November 5, 2020',
+    location: 'Decatur',
+    duration: '45mins'
 })
+const date3 = new Date({
+    date: 'November 5, 2020',
+    location: 'East Atlanta',
+    duration: '45mins'
+})
+
 
 const fido = new Dog({
-  name: 'Fido',
-  age: '3',
-  breed: "Bulldog",
-  height:'20in',
-  temperment:'friendly',
-  hypoalergenic:'no',
-  image:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/CH_Buck_and_Sons_Evita_Peron.jpg/220px-CH_Buck_and_Sons_Evita_Peron.jpg"
+    name: 'Fido',
+    age: '3',
+    breed: "Bulldog",
+    height: '20in',
+    temperment: 'friendly',
+    hypoalergenic: 'no',
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/CH_Buck_and_Sons_Evita_Peron.jpg/220px-CH_Buck_and_Sons_Evita_Peron.jpg",
+    dates: [date2]
 })
 
 const chichi = new Dog({
     name: 'Chichi',
     age: '3',
     breed: "Chihuahua",
-    height:'20in',
-    temperment:'friendly',
-    hypoalergenic:'no',
-    image:"https://animalso.com/wp-content/uploads/2017/01/Chihuahua_8.jpg"
-  })
+    height: '20in',
+    temperment: 'friendly',
+    hypoalergenic: 'no',
+    image: "https://animalso.com/wp-content/uploads/2017/01/Chihuahua_8.jpg",
+    dates: [date1]
+})
 
-  const poochie = new Dog({
+const poochie = new Dog({
     name: 'Poochie',
     age: '3',
     breed: "Pomeranian",
-    height:'10in',
-    temperment:'friendly',
-    hypoalergenic:'yes',
-    image:"https://www.listland.com/wp-content/uploads/2016/04/Pomeranians-love-to-be-dressed-by-their-owners.-No-it-doesnt-mean-youre-weird.-Im-sure-you-could-have-a-boyfriend-and-a-steady-job-if-you-really-wanted-one..jpg"
-  })
-  const loochie  = new Dog({
+    height: '10in',
+    temperment: 'friendly',
+    hypoalergenic: 'yes',
+    image: "https://www.listland.com/wp-content/uploads/2016/04/Pomeranians-love-to-be-dressed-by-their-owners.-No-it-doesnt-mean-youre-weird.-Im-sure-you-could-have-a-boyfriend-and-a-steady-job-if-you-really-wanted-one..jpg",
+    dates: [date3]
+})
+const loochie = new Dog({
     name: 'Loochie',
     age: '3',
     breed: "Pomeranian",
-    height:'10in',
-    temperment:'friendly',
-    hypoalergenic:'yes',
-    image:"https://media1.popsugar-assets.com/files/thumbor/Vj0QWI2J_x9LDaAanngVZInwYCc/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2011/02/05/2/192/1922243/9635b65b632d20ba_Screen_shot_2011-02-01_at_7.13.39_PM/i/Yum-I-Love-Bacon.png"
-  })
+    height: '10in',
+    temperment: 'friendly',
+    hypoalergenic: 'yes',
+    image: "https://media1.popsugar-assets.com/files/thumbor/Vj0QWI2J_x9LDaAanngVZInwYCc/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2011/02/05/2/192/1922243/9635b65b632d20ba_Screen_shot_2011-02-01_at_7.13.39_PM/i/Yum-I-Love-Bacon.png",
+    dates: [date2]
+})
+
+const rocky = new Dog({
+    name: 'Rocky',
+    age: '3',
+    breed: "Pomeranian",
+    height: '10in',
+    temperment: 'friendly',
+    hypoalergenic: 'yes',
+    image: "https://ermigal.files.wordpress.com/2017/03/mean-pomeranian.jpg",
+    dates: [date1]
+})
 
 
-// User.remove({})
-// .then(() => date.remove())
 
-// .then(() => elon.save())
-
-//   .then(() => console.log('Successful Save'))
-//   .then(() => mongoose.connection.close())
+Dog.remove({})
+    .then(() => Date.remove())
+    .then(() => Date.insertMany([date1, date2, date3]))
+    .then(() => Dog.save([rocky, loochie, poochie, chichi, fido]))
+    .then(() => console.log('Successful Save'))
+    .then(() => mongoose.connection.close())
