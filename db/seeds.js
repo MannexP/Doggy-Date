@@ -79,9 +79,13 @@ const rocky = new Dog({
 
 
 
-Dog.remove({})
-    .then(() => Date.remove())
+Dog.deleteMany({})
+    .then(() => Date.deleteMany({}))
     .then(() => Date.insertMany([date1, date2, date3]))
-    .then(() => Dog.save([rocky, loochie, poochie, chichi, fido]))
-    .then(() => console.log('Successful Save'))
+    .then(() => rocky.save())
+    .then(() => loochie.save())
+    .then(() => poochie.save())
+    .then(() => chichi.save())
+    .then(() => fido.save())
+    .then(() => console.log('Database seeded success'))
     .then(() => mongoose.connection.close())

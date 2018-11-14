@@ -15,5 +15,6 @@ const Dog = new Schema({
             ref: 'Date'
         }
     ]
+})
 
 module.exports = mongoose.model('Dog', Dog)
