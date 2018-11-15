@@ -32,7 +32,7 @@ class NavBar extends Component {
       <NavBarStyles id="nav-container" class="some-class">
         <Link to="/">Doggy Date</Link>
         <div className="right">
-          <Link to="/login">Log-In</Link>
+          {/* <Link to="/login">Log-In</Link> */}
         </div>
         
       </NavBarStyles>

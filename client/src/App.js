@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // eslint-disable-next-line
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 // import { createGlobalStyle } from 'styled-components'
-import LogInPage from './components/LogInPage'
+
 import HomePage from './components/HomePage'
 import NavBar from './components/NavBar'
 import DogsPage from './components/DogsPage'
@@ -21,7 +21,7 @@ class App
             
               <NavBar />
               <Switch>
-                <Route exact path="/login" component={LogInPage}/>
+                {/* <Route exact path="/login" component={LogInPage}/> */}
                 <Route exact path="/dogs/:dogId" component={DogPage}/>
                 <Route path="/" component={HomePage}/>
               </Switch>
