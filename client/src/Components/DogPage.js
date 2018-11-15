@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DogPage extends Component {
+class HomePage extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class DogPage extends Component {
     }
 }
 
-export default DogPage;
+export default HomePage;
