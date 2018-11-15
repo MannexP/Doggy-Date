@@ -4,7 +4,7 @@ class Dogs extends Component {
     render() {
         return (
             <div>
-                
+                DOGS
             </div>
         );
     }
