@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 // import { createGlobalStyle } from 'styled-components'
 
 // import HomePage from './components/HomePage'
-import NavBar from './components/NavBar'
+
 import DogsPage from './components/DogsPage'
 import DogPage from './components/DogPage'
 
