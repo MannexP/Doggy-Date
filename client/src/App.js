@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Global />
+         
           <NavBar />
           <Switch>
             <Route exact path="/dogs" component={Dogs}/>
