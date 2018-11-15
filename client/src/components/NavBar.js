@@ -28,8 +28,8 @@ const NavBarStyles = styled.div`
 class NavBar extends Component {
   render() {
     return (
-      <NavBarStyles id="nav-container" class="some-class">
-        <Link to="/">Doggy Dates</Link>
+      <NavBarStyles id="nav-container" className="some-class">
+        <Link to="/dogs">Doggy Dates</Link>
         <div className="right">
           <Link to="/login">Log-In</Link>
         </div>
