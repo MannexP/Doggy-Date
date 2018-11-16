@@ -7,7 +7,7 @@ const Dog = new Schema({
     breed: String,
     height: String,
     temperment: String,
-    hypoalergenic: String,
+    hypoallergenic: String,
     image: String,
     dates: [
         {

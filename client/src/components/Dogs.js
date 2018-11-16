@@ -25,12 +25,12 @@ class Dogs extends Component {
         let dogs = this.state.dogs.map((dog, i) => (
             <div key={i}>
                 <Link to={`/dogs/${dog._id}`}>{dog.name}</Link>
-                <img src={dog.image} alt="" />
+                {/* <img src={dog.image} alt="" /> */}
             </div>
         ))
         return (
             <div>
-                
+
                 <h3>All Dogs: </h3>
                 {dogs}
 
