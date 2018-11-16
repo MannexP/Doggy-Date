@@ -4,7 +4,7 @@ class Dog extends Component {
     render() {
         return (
             <div>
-                
+               DOG PAGE
             </div>
         );
     }

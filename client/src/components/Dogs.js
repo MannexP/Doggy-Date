@@ -22,19 +22,17 @@ class Dogs extends Component {
 
 
     render() {
-        let dogs = this.state.dogs.map((dog,i) => (
+        let dogs = this.state.dogs.map((dog, i) => (
             <div key={i}>
                 <Link to={`/dogs/${dog._id}`}>{dog.name}</Link>
-                {/* console.log(dogs) */}
-
+                <img src={dog.image} alt="" />
             </div>
         ))
         return (
             <div>
-
+                
                 <h3>All Dogs: </h3>
                 {dogs}
-                
 
             </div>
         );

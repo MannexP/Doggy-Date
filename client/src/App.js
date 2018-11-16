@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import LogIn from './components/LogIn'
 import HomePage from './components/HomePage'
@@ -7,14 +8,13 @@ import Dog from'./components/Dog'
 import NavBar from './components/NavBar'
 
 
-
-
 class App extends Component {
+  
+
   render() {
     return (
       <Router>
         <div>
-         
           <NavBar />
           <Switch>
           <Route exact path="/login" component={LogIn}/>
