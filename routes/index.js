@@ -4,7 +4,7 @@ const dogController = require('../controllers/dogController')
 // const dateController = require('../controllers/dateController')
 
 router.get('/api/dogs', dogController.index)
-router.post('/api/dog/', dogController.create)
+router.post('/api/dogs', dogController.create)
 router.get('/api/dogs/:dogId', dogController.show)
 router.patch('/api/dogs/:dogId', dogController.update)
 router.delete('/api/dogs/:dogId', dogController.delete)
