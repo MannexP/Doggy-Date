@@ -30,25 +30,15 @@ class SignUp extends Component {
         this.props.history.push(`/dogs/${res.data._id}`)
       })
       
-    }
-  
-  
-  
+    } 
     render() {
       return (
         <div>   
-          
-          { this.state.dogs.map((dog) => (
-            <div key={dog._id}>
-              <Link to={`/dogs/${dog._id}`}>{dog.name}</Link>
-            </div>
-          )) }
-  
           <h3>Sign-Up</h3>
           <form onSubmit={this.handleSubmit}>
             <div>
               <label htmlFor="name">Name: </label><br />
-              <input onChange={this.handleChange} value={this.state.newDog.name} type="text" name="username"/>
+              <input onChange={this.handleChange} value={this.state.newDog.name} type="text" name="name"/>
             </div>        
             <div>
               <label htmlFor="age">Age: </label><br />
