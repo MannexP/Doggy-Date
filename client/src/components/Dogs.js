@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-
 class Dogs extends Component {
     state = {
         dogs: []
@@ -31,7 +30,7 @@ class Dogs extends Component {
         return (
             <div>
 
-                <h3>All Dogs: </h3>
+                <h1>DOGS PAGE </h1>
                 {dogs}
 
             </div>

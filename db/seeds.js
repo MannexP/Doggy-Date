@@ -10,7 +10,6 @@ const date1 = new Date({
     location: 'Old Fourth Ward',
     duration: '45mins'
 })
-
 const date2 = new Date({
     date: 'November 5, 2020',
     location: 'Decatur',
@@ -21,8 +20,6 @@ const date3 = new Date({
     location: 'East Atlanta',
     duration: '45mins'
 })
-
-
 const fido = new Dog({
     name: 'Fido',
     age: '3',
@@ -33,7 +30,6 @@ const fido = new Dog({
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/CH_Buck_and_Sons_Evita_Peron.jpg/220px-CH_Buck_and_Sons_Evita_Peron.jpg",
     dates: [date2]
 })
-
 const chichi = new Dog({
     name: 'Chichi',
     age: '3',
@@ -44,7 +40,6 @@ const chichi = new Dog({
     image: "https://animalso.com/wp-content/uploads/2017/01/Chihuahua_8.jpg",
     dates: [date1]
 })
-
 const poochie = new Dog({
     name: 'Poochie',
     age: '3',
@@ -65,7 +60,6 @@ const loochie = new Dog({
     image: "https://media1.popsugar-assets.com/files/thumbor/Vj0QWI2J_x9LDaAanngVZInwYCc/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2011/02/05/2/192/1922243/9635b65b632d20ba_Screen_shot_2011-02-01_at_7.13.39_PM/i/Yum-I-Love-Bacon.png",
     dates: [date2]
 })
-
 const rocky = new Dog({
     name: 'Rocky',
     age: '3',
@@ -76,9 +70,6 @@ const rocky = new Dog({
     image: "https://ermigal.files.wordpress.com/2017/03/mean-pomeranian.jpg",
     dates: [date1]
 })
-
-
-
 Dog.deleteMany({})
     .then(() => Date.deleteMany({}))
     .then(() => Date.insertMany([date1, date2, date3]))
