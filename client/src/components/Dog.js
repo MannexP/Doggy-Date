@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+
 
 class Dog extends Component {
     state = {
         dog: {}
     }
-
     componentDidMount() {
         const dogId = this.props.match.params.dogId
         axios.get(`/api/dogs/${dogId}`).then((res) => {
@@ -16,9 +15,6 @@ class Dog extends Component {
             console.log(err)
         })
     }
-
-
-
     render() {
 
 

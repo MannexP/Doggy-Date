@@ -47,31 +47,31 @@ class SignUp extends Component {
           <h3>Sign-Up</h3>
           <form onSubmit={this.handleSubmit}>
             <div>
-              <label htmlFor="name">Name: </label>
+              <label htmlFor="name">Name: </label><br />
               <input onChange={this.handleChange} value={this.state.newDog.name} type="text" name="username"/>
-            </div>
+            </div>        
             <div>
-              <label htmlFor="age">Age: </label>
+              <label htmlFor="age">Age: </label><br />
               <input onChange={this.handleChange} value={this.state.newDog.age} type="text" name="age"/>
-            </div>
+            </div>        
             <div>
-              <label htmlFor="breed">Breed: </label>
+              <label htmlFor="breed">Breed: </label><br />
               <input onChange={this.handleChange} value={this.state.newDog.breed} type="text" name="breed"/>
             </div>
             <div>
-              <label htmlFor="height">Height: </label>
+              <label htmlFor="height">Height: </label><br />
               <input onChange={this.handleChange} value={this.state.newDog.height} type="text" name="height"/>
             </div>
             <div>
-              <label htmlFor="temperment">Temperment: </label>
+              <label htmlFor="temperment">Temperment: </label><br />
               <input onChange={this.handleChange} value={this.state.newDog.temperment} type="text" name="temperment"/>
             </div>
             <div>
-              <label htmlFor="hypoallergenic">Hypoallergenic: </label>
+              <label htmlFor="hypoallergenic">Hypoallergenic: </label><br />
               <input onChange={this.handleChange} value={this.state.newDog.hypoallergenic} type="text" name="hypoallergenic"/>
             </div>
             <div>
-              <label htmlFor="Image">Picture: </label>
+              <label htmlFor="Image">Picture: </label><br />
               <input onChange={this.handleChange} value={this.state.newDog.image} type="text" name="image"/>
             </div>
             <button type="submit">Sign Up</button>
