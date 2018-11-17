@@ -6,8 +6,13 @@ class SignUp extends Component {
     state = {
       dogs: [],
       newDog: {
-        username: '',
-        password: ''
+        name: '',
+        age: '',
+        breed: '',
+        height: '',
+        temperment: '',
+        hypoallergenic: '',
+        image: '',
       }
     }
   
@@ -22,8 +27,6 @@ class SignUp extends Component {
     handleSubmit = (event) => {
       event.preventDefault()
       axios.post('/api/dogs', this.state.newDog).then(res => {
-       
-        console.log(res.data)
         this.props.history.push(`/dogs/${res.data._id}`)
       })
       
@@ -44,12 +47,32 @@ class SignUp extends Component {
           <h3>Sign-Up</h3>
           <form onSubmit={this.handleSubmit}>
             <div>
-              <label htmlFor="username">Dog's Name: </label>
+              <label htmlFor="name">Name: </label>
               <input onChange={this.handleChange} value={this.state.newDog.name} type="text" name="username"/>
             </div>
             <div>
-              <label htmlFor="password">Password: </label>
-              <input onChange={this.handleChange} value={this.state.newDog.password} type="password" name="password"/>
+              <label htmlFor="age">Age: </label>
+              <input onChange={this.handleChange} value={this.state.newDog.age} type="text" name="age"/>
+            </div>
+            <div>
+              <label htmlFor="breed">Breed: </label>
+              <input onChange={this.handleChange} value={this.state.newDog.breed} type="text" name="breed"/>
+            </div>
+            <div>
+              <label htmlFor="height">Height: </label>
+              <input onChange={this.handleChange} value={this.state.newDog.height} type="text" name="height"/>
+            </div>
+            <div>
+              <label htmlFor="temperment">Temperment: </label>
+              <input onChange={this.handleChange} value={this.state.newDog.temperment} type="text" name="temperment"/>
+            </div>
+            <div>
+              <label htmlFor="hypoallergenic">Hypoallergenic: </label>
+              <input onChange={this.handleChange} value={this.state.newDog.hypoallergenic} type="text" name="hypoallergenic"/>
+            </div>
+            <div>
+              <label htmlFor="Image">Picture: </label>
+              <input onChange={this.handleChange} value={this.state.newDog.image} type="text" name="image"/>
             </div>
             <button type="submit">Sign Up</button>
           </form>
