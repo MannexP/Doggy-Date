@@ -15,16 +15,18 @@ const dogController = {
             })
     },
     update: (req, res) => {
-        Dog.findByIdAndUpdate(req.params.dogId, req.body)
+        console.log(req.body.data)
+        Dog.findByIdAndUpdate(req.params.dogId, req.body.data)
             .then((updatedDog) => {
                 updatedDog.save()
                 res.send(updatedDog)
+
             })
     },
     delete: (req, res) => {
         Dog.findByIdAndDelete(req.params.dogId)
             .then(() => {
-                res.send(200)
+                res.send(200);
             })
     },
     create: (req, res) => {

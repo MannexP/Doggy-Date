@@ -1,38 +1,121 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
+import { Route } from 'react-router-dom';
 
 class Dog extends Component {
     state = {
-        dog: {}
+        dog: {},
+        showEditForm: false,
+        tempDog: {
+
+        }
+
     }
     componentDidMount() {
-        const dogId = this.props.match.params.dogId
-        axios.get(`/api/dogs/${dogId}`).then((res) => {
-            console.log(res.data)
+        this.dogId = this.props.match.params.dogId
+        axios.get(`/api/dogs/${this.dogId}`).then((res) => {
+
+            console.log(this.dogId)
             this.setState({ dog: res.data })
         }).catch((err) => {
             console.log(err)
         })
     }
+    componentWillMount() {
+        this.fields = [
+            "name", 
+            "age",
+            "breed",
+            "height",
+            "temperment",
+            "image"
+        ]
+    }
+
+
+    deleteDog = (dogId, history) => {
+        axios.delete(`/api/dogs/${dogId}`).then((req, res) => {
+            this.setState({ dog: {} })
+            history.push('/dogs');
+        })
+    }
+    handleClick = () => {
+        if (!this.state.showEditForm) {
+            this.setState({
+                showEditForm: !this.state.showEditForm
+            })
+        } else {
+            this.setState({
+                dog: {
+                    dogId: this.dogId,
+                    ...this.state.dog,
+                    ...this.state.tempDog
+                },
+                tempDog: {},
+                showEditForm: false
+            }, () => {
+                axios.patch(
+                    `/api/dogs/${this.dogId}`,
+                    {
+                        data: this.state.dog
+                    }
+                )
+            })
+
+        }
+    }
+
+    renderForm = (banana) => {
+        return this.state.showEditForm && (
+            <input
+                type="text"
+                value={this.state.tempDog[banana]}
+                onChange={event => {
+                    this.setState({
+                        tempDog: {
+                            ...this.state.tempDog,
+                            [banana]: event.target.value
+                        }
+                    })
+                }}
+            />
+        )
+    }
+    renderFields = () => {
+        return this.fields.map((name) => {
+            if (name === "image") {
+                return (
+                    <div>
+                        <img src={this.state.dog[name]} alt="" />
+                        <div>
+                            {this.renderForm(name)}
+                        </div>
+                    </div>
+                )
+            }
+            return (
+                <div>
+                    <h2>{name.toUpperCase()}: {this.state.dog[name]}</h2>
+                    {this.renderForm(name)}
+                </div>
+            )
+        })
+    }
     render() {
-
-
         return (
-            <div>
-
-                <h1>Name:{this.state.dog.name}</h1>
-                <h2>Age:{this.state.dog.age}</h2>
-                <h2>Breed:{this.state.dog.breed}</h2>
-                <h2>Height:{this.state.dog.height}</h2>
-                <h2>Temperment:{this.state.dog.temperment}</h2>
-                <h2>Hypoallergenic:{this.state.dog.hypoallergenic}</h2>
-                <img src={this.state.dog.image} alt="d" />
-
-            </div>
-
-
-
+            <Route
+                render={({ history }) => {
+                    return (
+                        <div>                         
+                                {this.renderFields()}                      
+                            <button onClick={() => this.deleteDog(this.dogId, history)}>Delete</button>
+                            <button onClick={this.handleClick}>
+                                {this.state.showEditForm ? 'Done' : 'Edit'}
+                            </button>
+                        </div>
+                    );
+                }}
+            />
         );
     }
 }

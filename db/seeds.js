@@ -26,7 +26,6 @@ const fido = new Dog({
     breed: "Bulldog",
     height: '20in',
     temperment: 'friendly',
-    hypoalergenic: 'no',
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/CH_Buck_and_Sons_Evita_Peron.jpg/220px-CH_Buck_and_Sons_Evita_Peron.jpg",
     dates: [date2]
 })
@@ -36,7 +35,6 @@ const chichi = new Dog({
     breed: "Chihuahua",
     height: '20in',
     temperment: 'friendly',
-    hypoalergenic: 'no',
     image: "https://animalso.com/wp-content/uploads/2017/01/Chihuahua_8.jpg",
     dates: [date1]
 })
@@ -45,8 +43,7 @@ const poochie = new Dog({
     age: '3',
     breed: "Pomeranian",
     height: '10in',
-    temperment: 'friendly',
-    hypoalergenic: 'yes',
+    temperment: 'friendly',  
     image: "https://www.listland.com/wp-content/uploads/2016/04/Pomeranians-love-to-be-dressed-by-their-owners.-No-it-doesnt-mean-youre-weird.-Im-sure-you-could-have-a-boyfriend-and-a-steady-job-if-you-really-wanted-one..jpg",
     dates: [date3]
 })
@@ -55,8 +52,7 @@ const loochie = new Dog({
     age: '3',
     breed: "Pomeranian",
     height: '10in',
-    temperment: 'friendly',
-    hypoalergenic: 'yes',
+    temperment: 'friendly',  
     image: "https://media1.popsugar-assets.com/files/thumbor/Vj0QWI2J_x9LDaAanngVZInwYCc/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2011/02/05/2/192/1922243/9635b65b632d20ba_Screen_shot_2011-02-01_at_7.13.39_PM/i/Yum-I-Love-Bacon.png",
     dates: [date2]
 })
@@ -66,7 +62,6 @@ const rocky = new Dog({
     breed: "Pomeranian",
     height: '10in',
     temperment: 'friendly',
-    hypoalergenic: 'yes',
     image: "https://ermigal.files.wordpress.com/2017/03/mean-pomeranian.jpg",
     dates: [date1]
 })
