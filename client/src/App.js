@@ -8,6 +8,7 @@ import Dog from './components/Dog'
 import NavBar from './components/NavBar'
 import SignUp from './components/SignUp'
 import { createGlobalStyle } from 'styled-components'
+import Dates from './components/Dates'
 
 const Global = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -35,6 +36,7 @@ class App extends Component {
             <Route exact path="/Signup" component={SignUp} />
             <Route exact path="/dogs" component={Dogs} />
             <Route exact path="/dogs/:dogId" component={Dog} />
+            <Route exact path="/dates" component={Dates} />
             <Route path="/" component={HomePage} />
           </Switch>
         </div>

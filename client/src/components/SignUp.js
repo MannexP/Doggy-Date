@@ -6,28 +6,26 @@ import styled from 'styled-components'
 
 
 
-const SignUpStyles = styled.div`
-  background: #E9E8E8;
-  height: 420px;
-  width:350px;
-  margin-left: 550px;
-  margin-top: 200px;
-  border:solid .5px 
+// const SignUpStyles = styled.div`
+//   background: #E9E8E8;
+//   height: 420px;
+//   width:350px;
+//   margin-left: 550px;
+//   margin-top: 200px;
+//   border:solid .5px 
  
-`
+// `
 const FormStyles = styled.div`
 display: flex;
-justify-content: center;
-
-
+justify-content: center
+max-width: 300px;
+margin: 10px;
+padding: 10px;
+background: #f4f7f8;
+border-radius: 8px;
+margin-left: 550px;
+margin-top: 50px;
 `
-const SignUpForm = styled.div`
-display: flex;
-justify-content: flex-start;
-
-
-`
-
 
 class SignUp extends Component {
   state = {
@@ -60,39 +58,45 @@ class SignUp extends Component {
   }
   render() {
     return (
-      <SignUpStyles id="footer-container" className="footerclass">
+      // <SignUpStyles>
         <div>
-          <SignUpForm>
-            <h3>Sign-Up</h3>
-          </SignUpForm>
-          <FormStyles>
-            <form onSubmit={this.handleSubmit}>
-              <div>
-                <label htmlFor="name"></label>
-                <input onChange={this.handleChange} value={this.state.newDog.name} placeholder="Name" type="text" name="name" />
-                <label htmlFor="age"></label>
-                <input onChange={this.handleChange} value={this.state.newDog.age} placeholder="Age" type="text" name="age" />
-              </div>
-              <div>
-                <label htmlFor="breed"></label>
-                <input onChange={this.handleChange} value={this.state.newDog.breed} placeholder="Breed" type="text" name="breed" />
-                <label htmlFor="height"></label>
-                <input onChange={this.handleChange} value={this.state.newDog.height} placeholder="Height" type="text" name="height" />
-              </div>
-              <div>
-                <label htmlFor="temperment"></label>
-                <input onChange={this.handleChange} value={this.state.newDog.temperment} placeholder="Temperment" type="text" name="temperment" />
-              </div>
-              <div>
-                <label htmlFor="Image"></label><br />
-                <input onChange={this.handleChange} value={this.state.newDog.image} placeholder="Show Us Your Mug" type="text" name="image" />
-              </div>
+          <FormStyles>        
+            <form onSubmit={this.handleSubmit}> 
+            <h1>Sign Up</h1>
+            <div>
+              <label htmlFor="name">Name </label><br />      
+              <input onChange={this.handleChange} value={this.state.newDog.name} type="text" name="name"/>
+            </div>        
+            <div>
+              <label htmlFor="age">Age </label><br />
+              <input onChange={this.handleChange} value={this.state.newDog.age} type="text" name="age"/>
+            </div>        
+            <div>
+              <label htmlFor="breed">Breed </label><br />
+              <input onChange={this.handleChange} value={this.state.newDog.breed} type="text" name="breed"/>
+            </div>
+            <div>
+              <label htmlFor="height">Height </label><br />
+              <input onChange={this.handleChange} value={this.state.newDog.height} type="text" name="height"/>
+            </div>
+            <div>
+              <label htmlFor="temperment">Temperment </label><br />
+              <input onChange={this.handleChange} value={this.state.newDog.temperment} type="text" name="temperment"/>
+            </div>
+            <div>
+              <label htmlFor="hypoallergenic">Hypoallergenic </label><br />
+              <input onChange={this.handleChange} value={this.state.newDog.hypoallergenic} type="text" name="hypoallergenic"/>
+            </div>
+            <div>
+              <label htmlFor="Image">Picture </label><br />
+              <input onChange={this.handleChange} value={this.state.newDog.image} type="text" name="image"/>
+            </div>
 
               <button type="submit">Sign Up</button>
             </form>
-          </FormStyles>
+          </FormStyles>         
         </div>
-      </SignUpStyles>
+  
 
     );
   }
