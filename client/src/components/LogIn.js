@@ -25,7 +25,7 @@ class LogIn extends Component {
         let dogs = this.state.dogs.map((dog, i) => (
             <div key={i}>
                 <Link to={`/dogs`}>{dog.name}</Link>
-                {/* <img src={dog.image} alt="" /> */}
+                <img src={dog.image} alt="" />
             </div>
         ))
         return (

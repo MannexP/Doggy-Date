@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
+
+
+const HomePageStyles = styled.div`
+
+
+  background: #FFFFFF;
+  height: 350px;
+  width:350px;
+  margin-left: 400px;
+  margin-top: 200px;
+
+  border:solid 1px 
+
+  
+ 
+ 
+`
+
+
 
 class HomePage extends Component {
     render() {
         return (
-            <div>
-                <h1>HomePage</h1>
-            </div>
+            <HomePageStyles>
+            
+            </HomePageStyles>
         );
     }
 }

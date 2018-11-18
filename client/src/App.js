@@ -7,6 +7,18 @@ import Dogs from './components/Dogs'
 import Dog from './components/Dog'
 import NavBar from './components/NavBar'
 import SignUp from './components/SignUp'
+import { createGlobalStyle } from 'styled-components'
+
+const Global = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Poppins');
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #F6E2CA
+  }
+`
 
 
 class App extends Component {
@@ -16,6 +28,7 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Global />
           <NavBar />
           <Switch>
             <Route exact path="/login" component={LogIn} />
