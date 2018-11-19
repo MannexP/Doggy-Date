@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 
-
-
-
 const IdeaStyles = styled.div`
   display: flex;
   position: relative;
@@ -33,54 +30,49 @@ const IdeaStyles = styled.div`
     height: 70%;
   }
 `
-
 const NewIdeaButton = styled.button`
   background: #1d3557;
   color: white;
   font-size: 1.3rem;
   padding: 7.5px 5px;
 `
-
 const IdeasContainerStyle = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-content: flex-start;
 `
-
 class DatesPage extends Component {
   state = {
     dog: {},
     dates: []
   }
-
-
-
   componentDidMount() {
     const dogId = this.props.match.params.dogId
     axios.get(`/api/dogs/${dogId}`).then(res => {
-      console.log(res.data)
+
       this.setState({
         dog: res.data,
-        dates: res.data.ideas
+        dates: res.data.dates
       })
     })
   }
-
   handleCreateNewDate = () => {
     const dogId = this.props.match.params.dogId
+    const datesId = this.props.match.params.datesId
     const payload = {  
       date: "Date",
-      location: "Location",
       duration:"Time",
+      location: "Location",
     }
     axios.post(`/api/dogs/${dogId}/dates`, payload).then(res => {
       const newDate = res.data
+    
       const newStateDates = [...this.state.dates, newDate]
       this.setState({ dates: newStateDates })
+
     })
   }
-
   handleDelete = dateId => {
     axios.delete(`/api/date/${dateId}`).then(() => {
       const newDates = [...this.state.dates]
@@ -90,7 +82,6 @@ class DatesPage extends Component {
       this.setState({dates: filtered})
     })
   }
-
   handleChange = (event, dateId) => {
     const { value, name } = event.target
     const newDates = [...this.state.dates]
@@ -100,33 +91,30 @@ class DatesPage extends Component {
       }
       return date
     }) 
-
     this.setState({dates: updatedVals})
   }
-
   handleUpdate = (dateId) => {
     const dateToUpdate = this.state.dates.find(date => {
       return date._id === dateId
     })
-   
     axios.patch(`/api/date/${dateId}`, dateToUpdate).then(() => {
       console.log("Updated Date")  
     })
   }
-
   render() {
     return (
       <div>
+          
         <h1>{this.state.dog.name}'s Available Dates</h1>
         <NewIdeaButton onClick={this.handleCreateNewDate}>
-         Date
+        Post A Date
         </NewIdeaButton>
         <IdeasContainerStyle>
           {this.state.dates.map(date => {
+             
             const deleteDate = () => {
               return this.handleDelete(date._id)
             }
-
             return (
               <IdeaStyles>
                 <input 

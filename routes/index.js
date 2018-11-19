@@ -9,10 +9,10 @@ router.get('/api/dogs/:dogId', dogController.show)
 router.patch('/api/dogs/:dogId', dogController.update)
 router.delete('/api/dogs/:dogId', dogController.delete)
 
-router.get('/api/dog/:dogId/dates', dateController.index)
-router.get('/api/date/:dateId', dateController.show)
+router.get('/api/dogs/:dogId/dates', dateController.index)
+// router.get('/api/date/:dateId', dateController.show)
 router.delete('/api/date/:dateId', dateController.delete)
-router.patch('/api/date/:dateId', dateController.update)
-router.post('/api/dog/:dogId/dates', dateController.create)
+router.patch('/api/dogs/date/:dateId', dateController.update)
+router.post('/api/dogs/:dogId/dates', dateController.create)
 
 module.exports = router

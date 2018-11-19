@@ -20,7 +20,7 @@ const dateController = {
       let dateId = req.params.dateId
       Date.findByIdAndDelete(dateId)
         .then(() => {
-          res.send(200)
+          res.sendStatus(200)
         })
     },
     update: (req, res) => {
