@@ -15,9 +15,7 @@ border-radius: 8px;
 margin-left: 550px;
 margin-top: 50px;
 border-style: groove;
-
 `
-
 const ButtonStyles = styled.div
   `
   button {
@@ -64,7 +62,7 @@ class SignUp extends Component {
   }
   render() {
     return (
-      // <SignUpStyles>
+   
       <div>
         <FormStyles>
           <form onSubmit={this.handleSubmit}>
@@ -100,14 +98,10 @@ class SignUp extends Component {
             <ButtonStyles>
               <button type="submit">Sign Up</button>
             </ButtonStyles>
-
           </form>
         </FormStyles>
       </div>
-
-
     );
   }
 }
-
 export default SignUp;

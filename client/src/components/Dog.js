@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
+
 
 class Dog extends Component {
     state = {
@@ -112,6 +113,7 @@ class Dog extends Component {
                             <button onClick={this.handleClick}>
                                 {this.state.showEditForm ? 'Done' : 'Edit'}
                             </button>
+                            <button><Link to={`/dogs/${this.dogId}/dates`}>Available Dates</Link> </button>
                         </div>
                     );
                 }}
