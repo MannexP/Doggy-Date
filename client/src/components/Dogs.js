@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
+
+
+
+const ProfileCards =styled.div`
+display: flex;
+justify-content:align;
+
+`
+
 
 class Dogs extends Component {
     state = {
@@ -20,17 +31,24 @@ class Dogs extends Component {
     }
 
 
+
     render() {
         let dogs = this.state.dogs.map((dog, i) => (
-            <div key={i}>
-                <Link to={`/dogs/${dog._id}`}>{dog.name}</Link>
-                {/* <img src={dog.image} alt="" /> */}
-            </div>
+            <ProfileCards>
+                <div key={i}>
+                    <Link to={`/dogs/${dog._id}`}>{dog.name}</Link>
+                </div>
+                <div>
+                    <img src={dog.image} alt="" />
+                </div>
+            </ProfileCards>
+
         ))
         return (
             <div>
 
                 <h1>DOGS PAGE </h1>
+
                 {dogs}
 
             </div>

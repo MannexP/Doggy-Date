@@ -1,20 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-// eslint-disable-next-line
-
 import styled from 'styled-components'
 
 
 
-// const SignUpStyles = styled.div`
-//   background: #E9E8E8;
-//   height: 420px;
-//   width:350px;
-//   margin-left: 550px;
-//   margin-top: 200px;
-//   border:solid .5px 
- 
-// `
 const FormStyles = styled.div`
 display: flex;
 justify-content: center
@@ -25,6 +14,21 @@ background: #f4f7f8;
 border-radius: 8px;
 margin-left: 550px;
 margin-top: 50px;
+border-style: groove;
+`
+
+const ButtonStyles = styled.div
+  `
+  button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 37px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 `
 
 class SignUp extends Component {
@@ -59,44 +63,46 @@ class SignUp extends Component {
   render() {
     return (
       // <SignUpStyles>
-        <div>
-          <FormStyles>        
-            <form onSubmit={this.handleSubmit}> 
+      <div>
+        <FormStyles>
+          <form onSubmit={this.handleSubmit}>
             <h1>Sign Up</h1>
             <div>
-              <label htmlFor="name">Name </label><br />      
-              <input onChange={this.handleChange} value={this.state.newDog.name} type="text" name="name"/>
-            </div>        
+              <label htmlFor="name">Name </label><br />
+              <input onChange={this.handleChange} value={this.state.newDog.name} type="text" name="name" />
+            </div>
             <div>
               <label htmlFor="age">Age </label><br />
-              <input onChange={this.handleChange} value={this.state.newDog.age} type="text" name="age"/>
-            </div>        
+              <input onChange={this.handleChange} value={this.state.newDog.age} type="text" name="age" />
+            </div>
             <div>
               <label htmlFor="breed">Breed </label><br />
-              <input onChange={this.handleChange} value={this.state.newDog.breed} type="text" name="breed"/>
+              <input onChange={this.handleChange} value={this.state.newDog.breed} type="text" name="breed" />
             </div>
             <div>
               <label htmlFor="height">Height </label><br />
-              <input onChange={this.handleChange} value={this.state.newDog.height} type="text" name="height"/>
+              <input onChange={this.handleChange} value={this.state.newDog.height} type="text" name="height" />
             </div>
             <div>
               <label htmlFor="temperment">Temperment </label><br />
-              <input onChange={this.handleChange} value={this.state.newDog.temperment} type="text" name="temperment"/>
+              <input onChange={this.handleChange} value={this.state.newDog.temperment} type="text" name="temperment" />
             </div>
             <div>
               <label htmlFor="hypoallergenic">Hypoallergenic </label><br />
-              <input onChange={this.handleChange} value={this.state.newDog.hypoallergenic} type="text" name="hypoallergenic"/>
+              <input onChange={this.handleChange} value={this.state.newDog.hypoallergenic} type="text" name="hypoallergenic" />
             </div>
             <div>
               <label htmlFor="Image">Picture </label><br />
-              <input onChange={this.handleChange} value={this.state.newDog.image} type="text" name="image"/>
+              <input onChange={this.handleChange} value={this.state.newDog.image} type="text" name="image" />
             </div>
-
+            <ButtonStyles>
               <button type="submit">Sign Up</button>
-            </form>
-          </FormStyles>         
-        </div>
-  
+            </ButtonStyles>
+
+          </form>
+        </FormStyles>
+      </div>
+
 
     );
   }
