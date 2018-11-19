@@ -15,6 +15,7 @@ border-radius: 8px;
 margin-left: 550px;
 margin-top: 50px;
 border-style: groove;
+
 `
 
 const ButtonStyles = styled.div
@@ -28,6 +29,7 @@ const ButtonStyles = styled.div
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 3px;
 }
 `
 
@@ -94,7 +96,7 @@ class SignUp extends Component {
             <div>
               <label htmlFor="Image">Picture </label><br />
               <input onChange={this.handleChange} value={this.state.newDog.image} type="text" name="image" />
-            </div>
+            </div> <br />
             <ButtonStyles>
               <button type="submit">Sign Up</button>
             </ButtonStyles>
