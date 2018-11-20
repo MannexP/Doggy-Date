@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
+import DogPrint from "../Images/NewPaw.png"
 
 
 
@@ -30,6 +31,7 @@ const ButtonStyles = styled.div
     border-radius: 3px;
 }
 `
+
 
 class SignUp extends Component {
   state = {
@@ -64,6 +66,9 @@ class SignUp extends Component {
     return (
    
       <div>
+    
+
+       
         <FormStyles>
           <form onSubmit={this.handleSubmit}>
             <h1>Sign Up</h1>

@@ -32,8 +32,6 @@ class Dog extends Component {
             "image"
         ]
     }
-
-
     deleteDog = (dogId, history) => {
         axios.delete(`/api/dogs/${dogId}`).then((req, res) => {
             this.setState({ dog: {} })
@@ -96,7 +94,7 @@ class Dog extends Component {
             }
             return (
                 <div>
-                    <h2>{name.toUpperCase()}: {this.state.dog[name]}</h2>
+                    <h4>{name.toUpperCase()}: {this.state.dog[name]}</h4>
                     {this.renderForm(name)}
                 </div>
             )

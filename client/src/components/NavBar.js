@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
+
 const NavBarStyles = styled.div`
   display: flex;
   justify-content: space-between;
@@ -30,14 +31,12 @@ class NavBar extends Component {
     return (
       <NavBarStyles id="nav-container" className="some-class">
         <Link to="/">Doggy Dates</Link>
+        
+      
         <div className="right">
           <Link to="/login">Log-In</Link>
           <Link to="/signup">Sign Up</Link>
-        </div>
-        <div>
-        <Link to="/dates">Available Dates</Link> 
-        </div>
-        
+        </div>       
       </NavBarStyles>
     );
   }
