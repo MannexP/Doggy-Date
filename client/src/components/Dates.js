@@ -59,11 +59,11 @@ class DatesPage extends Component {
   }
   handleCreateNewDate = () => {
     const dogId = this.props.match.params.dogId
-    const datesId = this.props.match.params.datesId
     const payload = {  
-      date: "Date",
-      duration:"Time",
-      location: "Location",
+      date: "Date ",
+      location: "location",
+      duration:"Time"
+     
     }
     axios.post(`/api/dogs/${dogId}/dates`, payload).then(res => {
       const newDate = res.data
@@ -128,6 +128,18 @@ class DatesPage extends Component {
                   onChange={(event) => this.handleChange(event, date._id)} 
                   name="date" 
                   value={date.date} 
+                />
+                <textarea 
+                  onBlur={() => this.handleUpdate(date._id)}
+                  onChange={(event) => this.handleChange(event, date._id)} 
+                  name="date" 
+                  value={date.location} 
+                />
+                <textarea 
+                  onBlur={() => this.handleUpdate(date._id)}
+                  onChange={(event) => this.handleChange(event, date._id)} 
+                  name="date" 
+                  value={date.duration} 
                 />
                 <button onClick={deleteDate}>X</button>
               </IdeaStyles>

@@ -73,33 +73,33 @@ class SignUp extends Component {
           <form onSubmit={this.handleSubmit}>
             <h1>Sign Up</h1>
             <div>
-              <label htmlFor="name">Name </label><br />
+              <label htmlFor="name">Name </label>
               <input onChange={this.handleChange} value={this.state.newDog.name} type="text" name="name" />
             </div>
             <div>
-              <label htmlFor="age">Age </label><br />
+              <label htmlFor="age">Age </label>
               <input onChange={this.handleChange} value={this.state.newDog.age} type="text" name="age" />
             </div>
             <div>
-              <label htmlFor="breed">Breed </label><br />
+              <label htmlFor="breed">Breed </label>
               <input onChange={this.handleChange} value={this.state.newDog.breed} type="text" name="breed" />
             </div>
             <div>
-              <label htmlFor="height">Height </label><br />
+              <label htmlFor="height">Height </label>
               <input onChange={this.handleChange} value={this.state.newDog.height} type="text" name="height" />
             </div>
             <div>
-              <label htmlFor="temperment">Temperment </label><br />
+              <label htmlFor="temperment">Temperment </label>
               <input onChange={this.handleChange} value={this.state.newDog.temperment} type="text" name="temperment" />
             </div>
             <div>
-              <label htmlFor="hypoallergenic">Hypoallergenic </label><br />
+              <label htmlFor="hypoallergenic">Hypoallergenic </label>
               <input onChange={this.handleChange} value={this.state.newDog.hypoallergenic} type="text" name="hypoallergenic" />
             </div>
             <div>
-              <label htmlFor="Image">Picture </label><br />
+              <label htmlFor="Image">Picture </label>
               <input onChange={this.handleChange} value={this.state.newDog.image} type="text" name="image" />
-            </div> <br />
+            </div> 
             <ButtonStyles>
               <button type="submit">Sign Up</button>
             </ButtonStyles>

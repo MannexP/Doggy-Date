@@ -35,7 +35,6 @@ const dateController = {
       let dogId = req.params.dogId
       Dog.findById(dogId)
         .then((dogs) => {
-          console.log(dogs)
           Date.create(req.body)
             .then((newDate) => {
               console.log(newDate)
