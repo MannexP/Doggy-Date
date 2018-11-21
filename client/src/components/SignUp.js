@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
-import DogPrint from "../Images/NewPaw.png"
+// import DogPrint from "../Images/NewPaw.png"
 
 
 

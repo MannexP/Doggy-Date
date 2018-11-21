@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // eslint-disable-next-line
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import LogIn from './components/LogIn'
 import HomePage from './components/HomePage'
 import Dogs from './components/Dogs'
@@ -11,12 +11,12 @@ import { createGlobalStyle } from 'styled-components'
 import Dates from './components/Dates'
 
 const Global = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
   
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Allerta Stencil', sans-serif;
     background: #F6E2CA
   }
 `

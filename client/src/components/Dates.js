@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
+import { Button } from 'react-materialize'
 
 const IdeaStyles = styled.div`
   display: flex;
@@ -8,39 +9,47 @@ const IdeaStyles = styled.div`
   flex-direction: column;
   width: 200px;
   height: 200px;
-  background: #f1faee;
+  background: #fff;
   margin: 10px 0;
   button {
     position: absolute;
-    top: 5px;
+    bottom: 5px;
     right: 10px;
   }
-
-  input,
   textarea {
-    background-color: transparent;
-    border: solid;
-   
-  }
-  textarea {
-    height: 70%;
-    border: solid green;
-
+    height: 100px;
   }
 `
-const NewIdeaButton = styled.button`
-  background: #3F593B;
-  color: white;
-  font-size: 1.3rem;
-  padding: 7.5px 5px;
+const PostADate = styled.button`
+  background: #F6E2CA;
+  color: black;
+  font-size: 25px;
+  padding: 10px 10px;
   border-radius:3px;
+  border: 1px;
+  display: flex;
+  justify-content: center;
+  border-radius:5px
 `
-const IdeasContainerStyle = styled.div`
+const DatesContainer = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-content: flex-start;
 `
+const Buttons = styled.div
+  `
+display:flex;
+justify-content: center;
+`
+const HeadLine = styled.div
+`
+display:flex;
+justify-content: center;
+`
+
+
+
 class DatesPage extends Component {
   state = {
     dog: {},
@@ -87,6 +96,7 @@ class DatesPage extends Component {
     const updatedVals = newDates.map(date => {
       if (date._id === dateId) {
         date[name] = value
+
       }
       return date
     })
@@ -96,19 +106,26 @@ class DatesPage extends Component {
     const dateToUpdate = this.state.dates.find(date => {
       return date._id === dateId
     })
-    axios.patch(`/api/date/${dateId}`, dateToUpdate).then(() => {
+    axios.patch(`/api/dogs/${this.props.match.params.dogId}/date/${dateId}`, dateToUpdate).then(() => {
       console.log("Updated Date")
     })
   }
   render() {
     return (
-      <div>
 
-        <h1>{this.state.dog.name}'s Available Dates</h1>
-        <NewIdeaButton onClick={this.handleCreateNewDate}>
-          Post A Date
-        </NewIdeaButton>
-        <IdeasContainerStyle>
+      <div>
+        <HeadLine>
+          <h1>{this.state.dog.name}'s Available Dates</h1>
+        </HeadLine>
+
+        <Buttons>
+          <PostADate onClick={this.handleCreateNewDate}>
+          <Button floating large className='red' waves='light' icon='add' />
+            Post A Date
+        </PostADate>
+        </Buttons>
+
+        <DatesContainer>
           {this.state.dates.map(date => {
 
             const deleteDate = () => {
@@ -125,21 +142,20 @@ class DatesPage extends Component {
                 <textarea
                   onBlur={() => this.handleUpdate(date._id)}
                   onChange={(event) => this.handleChange(event, date._id)}
-                  name="date"
+                  name="location"
                   value={date.location}
                 />
                 <textarea
                   onBlur={() => this.handleUpdate(date._id)}
                   onChange={(event) => this.handleChange(event, date._id)}
-                  name="date"
+                  name="duration"
                   value={date.duration}
-                />
-                <button onClick={deleteDate}>Delete</button>
+                />    
+              <button onClick={deleteDate}>Delete</button>
               </IdeaStyles>
-             
             )
           })}
-        </IdeasContainerStyle>
+        </DatesContainer>
       </div>
     )
   }
