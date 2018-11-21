@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
+
+
+const DogNames = styled.div
+`
+margin-top:50px;
+margin-left: 50px;
+`
 
 class LogIn extends Component {
     state = {
@@ -29,12 +37,12 @@ class LogIn extends Component {
             </div>
         ))
         return (
-            <div>
+            <DogNames>
 
                 <h3>Users: </h3>
-                {dogs}
+                <h2>{dogs}</h2>
 
-            </div>
+            </DogNames>
         );
     }
 }

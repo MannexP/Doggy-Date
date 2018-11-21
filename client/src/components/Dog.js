@@ -64,16 +64,16 @@ class Dog extends Component {
         }
     }
 
-    renderForm = (banana) => {
+    renderForm = (newDog) => {
         return this.state.showEditForm && (
             <input
                 type="text"
-                value={this.state.tempDog[banana]}
+                value={this.state.tempDog[newDog]}
                 onChange={event => {
                     this.setState({
                         tempDog: {
                             ...this.state.tempDog,
-                            [banana]: event.target.value
+                            [newDog]: event.target.value
                         }
                     })
                 }}

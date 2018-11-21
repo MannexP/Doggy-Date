@@ -3,7 +3,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 import { Button } from 'react-materialize'
 
-const IdeaStyles = styled.div`
+const Dates = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
@@ -132,7 +132,7 @@ class DatesPage extends Component {
               return this.handleDelete(date._id)
             }
             return (
-              <IdeaStyles>
+              <Dates>
                 <textarea
                   onBlur={() => this.handleUpdate(date._id)}
                   onChange={(event) => this.handleChange(event, date._id)}
@@ -152,7 +152,7 @@ class DatesPage extends Component {
                   value={date.duration}
                 />    
               <button onClick={deleteDate}>Delete</button>
-              </IdeaStyles>
+              </Dates>
             )
           })}
         </DatesContainer>
