@@ -19,7 +19,7 @@ Doggy Date is a MERN Stack application (Mongo, Express, React, Node). It was cre
 
 ## Wire Frame
 
-![ERD](public/images/wf1.png)
+![ERD](public/Images/wf1.png)
 ![ERD](public/images/wf2.png)
 ![ERD](public/images/wf3.png)
 ![ERD](public/images/wf4.png)
