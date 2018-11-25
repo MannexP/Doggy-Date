@@ -5,14 +5,10 @@ import { Card, CardTitle } from 'react-materialize'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 
-
-const CardStyle = styled.div
-    `
-   
+const CardStyle = styled.div` 
 .card {
     width:300px;
     max-width:300px;  
- 
 }
 `
 const ContainerStyle = styled.div`

@@ -37,13 +37,11 @@ const DatesContainer = styled.div`
   flex-wrap: wrap;
   align-content: flex-start;
 `
-const Buttons = styled.div
-  `
+const Buttons = styled.div`
 display:flex;
 justify-content: center;
 `
-const HeadLine = styled.div
-`
+const HeadLine = styled.div`
 display:flex;
 justify-content: center;
 `

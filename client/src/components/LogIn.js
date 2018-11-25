@@ -5,8 +5,7 @@ import styled from 'styled-components'
 
 
 
-const DogNames = styled.div
-`
+const DogNames = styled.div`
 margin-top:50px;
 margin-left: 50px;
 `
@@ -16,7 +15,9 @@ class LogIn extends Component {
         dogs: []
     }
 
+
     getAllDogs = () => {
+            // get all dogs
         axios.get('/api/dogs').then((res) => {
             this.setState({ dogs: res.data })
         }).catch((err) => {
@@ -40,7 +41,7 @@ class LogIn extends Component {
             <DogNames>
 
                 <h3>Users: </h3>
-                <h2>{dogs}</h2>
+                <h5>{dogs}</h5>
 
             </DogNames>
         );

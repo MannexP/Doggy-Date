@@ -17,8 +17,8 @@ margin-left: 550px;
 margin-top: 50px;
 border-style: groove;
 `
-const ButtonStyles = styled.div
-  `
+
+const ButtonStyles = styled.div`
   button {
     background-color: #4CAF50; /* Green */
     border: none;
