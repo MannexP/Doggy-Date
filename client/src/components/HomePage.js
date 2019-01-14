@@ -3,10 +3,9 @@ import styled from 'styled-components';
 import mainTheme from '../images/dogsPlay.jpg';
 
 const MainTheme = styled.div`
-margin-left:375px;
-margin-top: 150px;
+  
 img {   
-    height:400px;
+
 }
 `
 class HomePage extends Component {
