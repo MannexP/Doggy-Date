@@ -4,7 +4,6 @@ import styled from 'styled-components'
 // import DogPrint from "../Images/NewPaw.png"
 
 
-
 const FormStyles = styled.div`
 display: flex;
 justify-content: center
@@ -60,7 +59,6 @@ class SignUp extends Component {
     axios.post('/api/dogs', this.state.newDog).then(res => {
       this.props.history.push(`/dogs/${res.data._id}`)
     })
-
   }
   render() {
     return (
