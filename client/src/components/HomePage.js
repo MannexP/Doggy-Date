@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import mainTheme from '../images/dogsPlay.jpg';
 
 const MainTheme = styled.div`
 margin-left:375px;
@@ -13,7 +14,7 @@ class HomePage extends Component {
         return (
             <div>
                 <MainTheme>
-                    <img src="https://media2.giphy.com/media/Ood1OSF92jubS/200w.webp?cid=3640f6095bf4a3bf6b7041736bb41c94" alt=""/>
+                    <img src={mainTheme} alt=""/>
                 </MainTheme>
                 <MainTheme>
                 </MainTheme>
