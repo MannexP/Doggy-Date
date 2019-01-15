@@ -13,13 +13,15 @@ const MainTheme = styled.div`
   bottom: 5rem;
   right: 20px;
   background-color: black;
-  opacity: 0.5;
+  opacity: .4;
   border-radius: 2%;
   color: white;
   padding-left: 20px;
   padding-right: 20rem;
 }
-h4{}
+h4{
+    font-size: 8rem;
+}
 `
 class HomePage extends Component {
     render() {
