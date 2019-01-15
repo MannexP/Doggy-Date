@@ -8,7 +8,7 @@ const NavBarStyles = styled.div`
   justify-content: space-between;
   align-items: center;
   background:#0A3501;
-  height: 70px;
+  height: 8rem;
   
   a {
     text-decoration: none;

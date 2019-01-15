@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import mainTheme from '../images/dogsPlay.jpg';
+import mainTheme2 from '../images/dogsPlay2.jpg';
+import mainTheme3 from '../images/dogsPlay3.jpg';
+import mainTheme4 from '../images/dogsPlay4.jpg';
+import mainTheme5 from '../images/dogsPlay5.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const MainTheme = styled.div`
   position: relative;
 
   .text-block {
   height: 8rem;
-  width: 101rem;
+  width: 94rem;
   position: absolute;
   bottom: 5rem;
   right: 20px;
@@ -23,7 +28,7 @@ const MainTheme = styled.div`
  
 }
 h4{
-    font-size: 4.5rem;
+    font-size: 5rem;
 }
 `
 class HomePage extends Component {
@@ -35,9 +40,12 @@ class HomePage extends Component {
                     <div className="text-block">
                         <h4>Nature's best friend needs a best friend too</h4>
                     </div>
-                </MainTheme>
+                </MainTheme>      
+            </div>   
 
-            </div>
+
+
+
         );
     }
 }

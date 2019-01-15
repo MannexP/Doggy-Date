@@ -11,7 +11,7 @@ const FootBar = styled.div`
   bottom: 0;
   width: 100%;
   height:5rem;
-  p{
+  h5{
       float:right;
       margin-right: 1rem;
       margin-top: 1rem;
@@ -28,7 +28,7 @@ class Footer extends Component {
             <div>
                 <FootBar>
                     <div class="navbar" id="myNavbar">
-                        <h5>Copyright 2019</h5>
+                        <h5>Copyright © 2019</h5>
                  
                     </div>
                   
