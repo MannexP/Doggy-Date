@@ -7,8 +7,8 @@ const MainTheme = styled.div`
   position: relative;
 
   .text-block {
-  height: 30rem;
-  width: 70rem;
+  height: 8rem;
+  width: 101rem;
   position: absolute;
   bottom: 5rem;
   right: 20px;
@@ -16,11 +16,14 @@ const MainTheme = styled.div`
   opacity: .4;
   border-radius: 2%;
   color: white;
-  padding-left: 20px;
-  padding-right: 20rem;
+  padding-left: 1rem;
+ 
+  
+  margin-left: 2rem;
+ 
 }
 h4{
-    font-size: 8rem;
+    font-size: 4.5rem;
 }
 `
 class HomePage extends Component {
@@ -30,8 +33,7 @@ class HomePage extends Component {
                 <MainTheme>
                     <img src={mainTheme} alt="" />
                     <div className="text-block">
-                        <h4>Nature</h4>
-                        <p>What a beautiful sunrise</p>
+                        <h4>Nature's best friend needs a best friend too</h4>
                     </div>
                 </MainTheme>
 

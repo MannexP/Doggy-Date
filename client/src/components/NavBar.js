@@ -7,7 +7,7 @@ const NavBarStyles = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background:#183311;
+  background:#0A3501;
   height: 70px;
   
   a {
