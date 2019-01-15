@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
     "react-animated-css": "^1.0.4",
     "react-dom": "^16.7.0",
     "react-materialize": "^2.5.0",

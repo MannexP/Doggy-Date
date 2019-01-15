@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import mainTheme from '../images/dogsPlay.jpg';
-// import HomeCarousel from './HomeCarousel '
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MainTheme = styled.div`
   position: relative;
