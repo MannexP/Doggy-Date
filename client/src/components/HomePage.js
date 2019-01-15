@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import mainTheme from '../images/dogsPlay.jpg';
+// import HomeCarousel from './HomeCarousel '
 
 const MainTheme = styled.div`
   
@@ -15,8 +16,7 @@ class HomePage extends Component {
                 <MainTheme>
                     <img src={mainTheme} alt=""/>
                 </MainTheme>
-                <MainTheme>
-                </MainTheme>
+               {/* <HomeCarousel></HomeCarousel> */}
             </div>
         );
     }

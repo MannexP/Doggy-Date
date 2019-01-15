@@ -6,6 +6,7 @@ import HomePage from './components/HomePage'
 import Dogs from './components/Dogs'
 import Dog from './components/Dog'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 import SignUp from './components/SignUp'
 import { createGlobalStyle } from 'styled-components'
 import Dates from './components/Dates'
@@ -39,6 +40,7 @@ class App extends Component {
             <Route exact path="/dogs/:dogId/dates" component={Dates} />
             <Route path="/" component={HomePage} />
           </Switch>
+          <Footer/>
         </div>
       </Router>
     );
