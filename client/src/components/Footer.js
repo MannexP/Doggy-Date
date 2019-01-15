@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const FootBar = styled.div`
 .navbar {
-  background-color: #0A3501;
+  background-color: #28282B;
   overflow: hidden;
   position: fixed;
   bottom: 0;

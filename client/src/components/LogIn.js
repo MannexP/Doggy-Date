@@ -10,24 +10,27 @@ const MainTheme2 = styled.div`
   position: relative;
 
   .text-block {
-  height: 8rem;
-  width: 94rem;
+  
+  
   position: absolute;
-  bottom: 5rem;
-  right: 20px;
-  background-color: black;
-  opacity: .4;
+  top: 5rem;
+  margin-left: 3rem;
+  /* right: 20px; */
+  background-color: black
+  opacity: .5;
   border-radius: 2%;
   color: white;
-  padding-left: 1rem;
+  padding: 1rem;
+
  
   
-  margin-left: 2rem;
- 
-}
-h4{
+  /* margin-left: 2rem; */
+  h4{
     font-size: 5rem;
+    color: #0A3501;
 }
+}
+
 `
 
 
@@ -66,18 +69,22 @@ class LogIn extends Component {
             </div>
         ))
         return (
-            // <DogNames>
+            <div>
+                {/* <DogNames>
 
-            //     <h3>Users: </h3>
-            //     <h5>{dogs}</h5>
+                    <h3>Users: </h3>
+                    <h5>{dogs}</h5>
 
-            // </DogNames>
-            <MainTheme2>
-                <img src={mainTheme2} alt="" />
-                <div className="text-block">
-                    <h4>Nature's best friend needs a best friend too</h4>
-                </div>
-            </MainTheme2>
+                </DogNames> */}
+                <MainTheme2>
+
+                    <img src={mainTheme2} alt="" />
+                    <div className="text-block">
+                        <h4>{dogs}</h4>
+                    </div>
+                </MainTheme2>
+            </div>
+
         );
     }
 }

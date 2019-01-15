@@ -15,14 +15,15 @@ const MainTheme = styled.div`
   height: 8rem;
   width: 94rem;
   position: absolute;
-  bottom: 5rem;
+  bottom: 8rem;
   right: 20px;
-  background-color: black;
-  opacity: .4;
+  background-color: grey;
+  opacity: .6;
   border-radius: 2%;
   color: white;
   padding-left: 1rem;
- 
+  padding-top: 1em;
+  
   
   margin-left: 2rem;
  
