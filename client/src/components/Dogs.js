@@ -57,7 +57,7 @@ class Dogs extends Component {
                     <Card className='small' header={<CardTitle image={dog.image}></CardTitle>}
                         actions={[<Link to={`/dogs/${dog._id}`}><p>More About {dog.name}</p></Link>]}>
                         <h4>{dog.name}</h4>
-                        <h3>I'm {dog.age}</h3>
+                        <h3>I'm a {dog.breed}</h3>
                     </Card>
                 </CardStyle>
             </div>

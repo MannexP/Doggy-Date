@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const FormStyles = styled.div`
 display: flex;
-justify-content: center
+justify-content: center;
 max-width: 300px;
 margin: 10px;
 padding: 10px;
@@ -95,7 +95,7 @@ class SignUp extends Component {
               <input onChange={this.handleChange} value={this.state.newDog.hypoallergenic} type="text" name="hypoallergenic" />
             </div>
             <div>
-              <label htmlFor="Image">Picture </label>
+              <label htmlFor="image">Picture </label>
               <input onChange={this.handleChange} value={this.state.newDog.image} type="text" name="image" />
             </div> 
             <ButtonStyles>
