@@ -68,7 +68,8 @@ class DatesPage extends Component {
     const payload = {
       date: "Date ",
       location: "Location",
-      duration: "Time"
+      duration: "Member"
+   
 
     }
     axios.post(`/api/dogs/${dogId}/dates`, payload).then(res => {
@@ -148,7 +149,13 @@ class DatesPage extends Component {
                   onChange={(event) => this.handleChange(event, date._id)}
                   name="duration"
                   value={date.duration}
-                />    
+                />   
+                <textarea
+                  onBlur={() => this.handleUpdate(date._id)}
+                  onChange={(event) => this.handleChange(event, date._id)}
+                  name="member"
+                  value={date.member}
+                />     
               <button onClick={deleteDate}>Delete</button>
               </Dates>
             )
