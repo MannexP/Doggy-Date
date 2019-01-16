@@ -7,8 +7,17 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 const CardStyle = styled.div` 
 .card {
-    width:300px;
-    max-width:300px;  
+    width:25rem;
+    max-width:40rem; 
+    background: #8588A1; 
+    height: 35rem;
+   h4, h3{
+       color: white;
+   }
+   p{
+       color:white;
+       font-size: 1rem;
+   }
 }
 `
 const ContainerStyle = styled.div`
@@ -16,7 +25,10 @@ const ContainerStyle = styled.div`
     flex-wrap: wrap;
     justify-content: space-around;
     margin:100px;
+    
 `
+
+
 
 
 class Dogs extends Component {
@@ -42,23 +54,20 @@ class Dogs extends Component {
         let dogs = this.state.dogs.map((dog, i) => (
             <div key={i}>
                 <CardStyle>
-                    <Card className='small' header={<CardTitle image={dog.image}>{dog.name}</CardTitle>}
-                        actions={[<Link to={`/dogs/${dog._id}`}>More About {dog.name}</Link>]}>
-                        I'm {dog.age}
+                    <Card className='small' header={<CardTitle image={dog.image}></CardTitle>}
+                        actions={[<Link to={`/dogs/${dog._id}`}><p>More About {dog.name}</p></Link>]}>
+                        <h4>{dog.name}</h4>
+                        <h3>I'm {dog.age}</h3>
                     </Card>
                 </CardStyle>
             </div>
         ))
         return (
-            <div>
-                <ContainerStyle>
+           
+                 <ContainerStyle>
                     {dogs}
                 </ContainerStyle>
-
-
-
-
-            </div>
+        
         );
     }
 }
