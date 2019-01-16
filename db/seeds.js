@@ -62,7 +62,7 @@ const billy = new Dog({
     breed: "French Bulldog",
     height: '40in',
     temperment: 'Lazy',
-    image: "https://i.ytimg.com/vi/405AYHnSTnU/maxresdefault.jpg",
+    image: "https://www.biscuitsandbath.com/wp-content/uploads/2016/06/French-Bulldog.jpg",
     dates: [date2]
 })
 const yoni = new Dog({
