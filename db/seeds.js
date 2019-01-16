@@ -20,30 +20,66 @@ const date3 = new Date({
     location: 'East Atlanta',
     duration: '45mins'
 })
+const teddy = new Dog({
+    name: 'Teddy',
+    age: '5',
+    breed: "Husky",
+    height: '40in',
+    temperment: 'Hunter',
+    image: "http://www.dogbehaviors.net/wp-content/uploads/2014/11/husky-dog-behaviors.jpg",
+    dates: [date2]
+})
+const billy = new Dog({
+    name: 'Billy',
+    age: '3',
+    breed: "French Bulldog",
+    height: '40in',
+    temperment: 'Lazy',
+    image: "https://i.ytimg.com/vi/405AYHnSTnU/maxresdefault.jpg",
+    dates: [date2]
+})
+const yoni = new Dog({
+    name: 'Yoni',
+    age: '1',
+    breed: "Rotweilder",
+    height: '20in',
+    temperment: 'Friendly',
+    image: "https://media2.fdncms.com/clevescene/imager/u/original/15064997/rottweiler-head.jpg",
+    dates: [date2]
+})
+const noli = new Dog({
+    name: 'Noli',
+    age: '1',
+    breed: "Corgi",
+    height: '20in',
+    temperment: 'Friendly',
+    image: "https://www.thesprucepets.com/thmb/KEkwV1YeL3obCMo0YSPDXTCxjRA=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/19933184_104417643500613_5541725731421159424_n-5ba0548546e0fb0050edecc0.jpg",
+    dates: [date2]
+})
 const fido = new Dog({
     name: 'Fido',
-    age: '3',
+    age: '2',
     breed: "Bulldog",
     height: '20in',
-    temperment: 'friendly',
+    temperment: 'Friendly',
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/CH_Buck_and_Sons_Evita_Peron.jpg/220px-CH_Buck_and_Sons_Evita_Peron.jpg",
     dates: [date2]
 })
 const chichi = new Dog({
     name: 'Chichi',
-    age: '3',
+    age: '1',
     breed: "Chihuahua",
     height: '20in',
-    temperment: 'friendly',
+    temperment: 'Friendly',
     image: "https://animalso.com/wp-content/uploads/2017/01/Chihuahua_8.jpg",
     dates: [date1]
 })
 const poochie = new Dog({
     name: 'Poochie',
-    age: '3',
+    age: '5',
     breed: "Pomeranian",
     height: '10in',
-    temperment: 'friendly',  
+    temperment: 'Friendly',  
     image: "https://www.listland.com/wp-content/uploads/2016/04/Pomeranians-love-to-be-dressed-by-their-owners.-No-it-doesnt-mean-youre-weird.-Im-sure-you-could-have-a-boyfriend-and-a-steady-job-if-you-really-wanted-one..jpg",
     dates: [date3]
 })
@@ -52,7 +88,7 @@ const loochie = new Dog({
     age: '3',
     breed: "Pomeranian",
     height: '10in',
-    temperment: 'friendly',  
+    temperment: 'Friendly',  
     image: "https://media1.popsugar-assets.com/files/thumbor/Vj0QWI2J_x9LDaAanngVZInwYCc/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2011/02/05/2/192/1922243/9635b65b632d20ba_Screen_shot_2011-02-01_at_7.13.39_PM/i/Yum-I-Love-Bacon.png",
     dates: [date2]
 })
@@ -61,7 +97,7 @@ const rocky = new Dog({
     age: '3',
     breed: "Pomeranian",
     height: '10in',
-    temperment: 'friendly',
+    temperment: 'Friendly',
     image: "https://ermigal.files.wordpress.com/2017/03/mean-pomeranian.jpg",
     dates: [date1]
 })
@@ -73,5 +109,9 @@ Dog.deleteMany({})
     .then(() => poochie.save())
     .then(() => chichi.save())
     .then(() => fido.save())
+    .then(() => noli.save())
+    .then(() => yoni.save())
+    .then(() => billy.save())
+    .then(() => teddy.save())
     .then(() => console.log('Database seeded success'))
     .then(() => mongoose.connection.close())
