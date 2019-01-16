@@ -20,6 +20,24 @@ const date3 = new Date({
     location: 'East Atlanta',
     duration: '45mins'
 })
+const coco = new Dog({
+    name: 'Coco',
+    age: '5',
+    breed: "Shitszu",
+    height: '10in',
+    temperment: '',
+    image: "https://cdn2-www.dogtime.com/assets/uploads/gallery/shih-tzu-dog-breed-pictures/shih-tzu-breed-picture-1.jpg",
+    dates: [date2]
+})
+const comet = new Dog({
+    name: 'Comet',
+    age: '5',
+    breed: "Labrador",
+    height: '40in',
+    temperment: '',
+    image: "https://static1.squarespace.com/static/573b62e9746fb941c1458dcd/t/58bf1f27d1758e5d0c580379/1488921550603/who-we-are.jpg",
+    dates: [date2]
+})
 const teddy = new Dog({
     name: 'Teddy',
     age: '5',
@@ -95,10 +113,10 @@ const loochie = new Dog({
 const rocky = new Dog({
     name: 'Rocky',
     age: '3',
-    breed: "Pomeranian",
-    height: '10in',
+    breed: "Pitbull",
+    height: '24in',
     temperment: 'Friendly',
-    image: "https://ermigal.files.wordpress.com/2017/03/mean-pomeranian.jpg",
+    image: "https://getyourpet.com/wp-content/uploads/2018/09/pitbull-in-la-yard.jpg",
     dates: [date1]
 })
 Dog.deleteMany({})
@@ -113,5 +131,6 @@ Dog.deleteMany({})
     .then(() => yoni.save())
     .then(() => billy.save())
     .then(() => teddy.save())
+    .then(() => comet.save())
     .then(() => console.log('Database seeded success'))
     .then(() => mongoose.connection.close())
