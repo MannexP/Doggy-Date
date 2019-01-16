@@ -8,6 +8,9 @@ import mainTheme2 from '../images/dogsPlay2.jpg';
 
 const MainTheme2 = styled.div`
   position: relative;
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: column;
 
   .text-block {
   position: absolute;
@@ -18,16 +21,16 @@ const MainTheme2 = styled.div`
   opacity: .5;
   border-radius: 2%;
   color: white;
-  padding: 1rem
+  padding: 1rem;
+ 
  
   h4{
-    font-size: 5rem;
+    font-size: 4rem;
     color: #0A3501;
 }
 }
 
 `
-
 
 
 
@@ -64,15 +67,9 @@ class LogIn extends Component {
             </div>
         ))
         return (
-            <div>
-                {/* <DogNames>
-
-                    <h3>Users: </h3>
-                    <h5>{dogs}</h5>
-
-                </DogNames> */}
+            <div> 
+                <div></div>
                 <MainTheme2>
-
                     <img src={mainTheme2} alt="" />
                     <div className="text-block">
                         <h4>{dogs}</h4>
