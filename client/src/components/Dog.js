@@ -1,11 +1,41 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Route, Link } from 'react-router-dom';
+import styled from 'styled-components'
+
+
+const Avatar = styled.div`
+margin-left:3rem;
+padding-top: 0;
+
+
+img{
+    border-radius: 50%;
+    height: 20rem;
+    width: 21rem;
+    padding-top:0;
+
+}
+
+`
+const Profile = styled.div`
+margin-left:1000px;
+border-style: groove;
+max-width: 20rem;
+max-height: 20rem;
+background-color: rgba(38, 39, 54, 0.5)
+
+`
+const Options = styled.div`
+margin-left:1000px;
 
 
 
-
-
+`
+const WholePage = styled.div`
+display: grid;
+grid-template-rows:1fr 1fr 1fr;
+`
 
 
 
@@ -14,14 +44,11 @@ class Dog extends Component {
         dog: {},
         showEditForm: false,
         tempDog: {
-
         }
-
     }
     componentDidMount() {
         this.dogId = this.props.match.params.dogId
         axios.get(`/api/dogs/${this.dogId}`).then((res) => {
-
             console.log(this.dogId)
             this.setState({ dog: res.data })
         }).catch((err) => {
@@ -30,7 +57,7 @@ class Dog extends Component {
     }
     componentWillMount() {
         this.fields = [
-            "name", 
+            "name",
             "age",
             "breed",
             "height",
@@ -66,10 +93,8 @@ class Dog extends Component {
                     }
                 )
             })
-
         }
     }
-
     renderForm = (newDog) => {
         return this.state.showEditForm && (
             <input
@@ -90,38 +115,45 @@ class Dog extends Component {
         return this.fields.map((name) => {
             if (name === "image") {
                 return (
-                    <div>
+                    <Avatar>
                         <img src={this.state.dog[name]} alt="" />
                         <div>
                             {this.renderForm(name)}
                         </div>
-                    </div>
+                    </Avatar>
                 )
             }
             return (
-                <div>
+                <Profile>
                     <h4>{name.toUpperCase()}: {this.state.dog[name]}</h4>
                     {this.renderForm(name)}
-                </div>
+                </Profile>
             )
         })
     }
     render() {
         return (
-            <Route
+          
+               
+                 <Route
                 render={({ history }) => {
                     return (
-                        <div>                         
-                                {this.renderFields()}                      
-                            <button onClick={() => this.deleteDog(this.dogId, history)}>Delete</button>
-                            <button onClick={this.handleClick}>
-                                {this.state.showEditForm ? 'Done' : 'Edit'}
-                            </button>
-                            <button><Link to={`/dogs/${this.dogId}/dates`}>Available Dates</Link> </button>
+                        <div>
+                            {this.renderFields()}
+                            <Options>
+                                <button onClick={() => this.deleteDog(this.dogId, history)}>Delete</button>
+                                <button onClick={this.handleClick}>
+                                    {this.state.showEditForm ? 'Done' : 'Edit'}
+                                </button>
+                                <button><Link to={`/dogs/${this.dogId}/dates`}>Available Dates</Link> </button>
+                            </Options>
                         </div>
                     );
                 }}
             />
+
+           
+           
         );
     }
 }

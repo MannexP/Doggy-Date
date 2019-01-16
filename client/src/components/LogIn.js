@@ -10,21 +10,16 @@ const MainTheme2 = styled.div`
   position: relative;
 
   .text-block {
-  
-  
   position: absolute;
   top: 5rem;
   margin-left: 3rem;
   /* right: 20px; */
-  background-color: black
+  background-color: black;
   opacity: .5;
   border-radius: 2%;
   color: white;
-  padding: 1rem;
-
+  padding: 1rem
  
-  
-  /* margin-left: 2rem; */
   h4{
     font-size: 5rem;
     color: #0A3501;
