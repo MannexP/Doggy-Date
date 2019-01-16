@@ -20,6 +20,15 @@ const date3 = new Date({
     location: 'East Atlanta',
     duration: '45mins'
 })
+const ralph = new Dog({
+    name: 'Ralph',
+    age: '5',
+    breed: "Terrier",
+    height: '10in',
+    temperment: '',
+    image: "https://www.petguide.com/wp-content/uploads/2018/03/sco-shi.jpg",
+    dates: [date2]
+})
 const coco = new Dog({
     name: 'Coco',
     age: '5',
@@ -132,5 +141,7 @@ Dog.deleteMany({})
     .then(() => billy.save())
     .then(() => teddy.save())
     .then(() => comet.save())
+    .then(() => coco.save())
+    .then(() => ralph.save())
     .then(() => console.log('Database seeded success'))
     .then(() => mongoose.connection.close())
