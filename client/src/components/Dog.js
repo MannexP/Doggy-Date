@@ -11,6 +11,7 @@ margin-left:3rem;
 padding-top: 0;
 
 
+
 img{
     border-radius: 50%;
     height: 20rem;
@@ -23,29 +24,37 @@ img{
 const Profile = styled.div`
 
 margin-left:1000px;
-border-style: groove;
+border-style: thin;
 max-width: 20rem;
 max-height: 20rem;
-background-color: rgba(38, 39, 54, 0.5)
-
+background-color: rgba(38, 39, 54, 0.1)
 `
 const Options = styled.div`
-
 width:400px;
 margin-left:1000px;
 display:flex;
 justify-content:space-evenly
-
 h5{
     color: white;
 }
 `
 const WholePage = styled.div`
 display: grid;
-grid-template-rows:1fr 1fr 1fr;
+grid-template-rows:1fr 1fr;
 `
+const Profile2 = styled.div`
+width:400px;
+margin-left:1000px;
+display:flex;
+margin-top: 20px;
+.bio{
+    
+}
 
-
+h5{
+    color: white;
+}
+`
 
 class Dog extends Component {
     state = {
@@ -135,12 +144,14 @@ class Dog extends Component {
                 )
             }
             return (
-                <div>
-                    <Profile>
+
+                <Profile2>
+                    <div className="bio">
                         <h4>{name.toUpperCase()}: {this.state.dog[name]}</h4>
                         {this.renderForm(name)}
-                    </Profile>
-                </div>
+                    </div>
+                </Profile2>
+
 
             )
         })
@@ -155,11 +166,11 @@ class Dog extends Component {
                             <div>
                                 {this.renderFields()}
                                 <Options>
-                                  
-                                    
+
+
                                     <Button color="danger" onClick={() => this.deleteDog(this.dogId, history)}><h5>Delete</h5></Button>
                                     <Button color="secondary" onClick={this.handleClick}>
-                                       {this.state.showEditForm ? <h5>Done</h5> : <h5>'Edit'</h5>}
+                                        {this.state.showEditForm ? <h5>Done</h5> : <h5>Edit</h5>}
                                     </Button >
                                     <Button color="secondary"><Link to={`/dogs/${this.dogId}/dates`}><h5>Dates</h5></Link> </Button>
                                 </Options>
