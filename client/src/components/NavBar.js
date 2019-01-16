@@ -9,6 +9,12 @@ const NavBarStyles = styled.div`
   align-items: center;
   background:#28282B;
   height: 8rem;
+  h3{
+    font-size: 4rem;
+  }
+  h5{
+    font-size: 3rem;
+  }
   
   a {
     text-decoration: none;

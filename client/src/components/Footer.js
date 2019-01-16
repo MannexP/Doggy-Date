@@ -10,7 +10,7 @@ const FootBar = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
-  height:5rem;
+  height:8rem;
   h5{
       float:right;
       margin-right: 1rem;
