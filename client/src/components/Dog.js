@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { Button } from 'reactstrap'
+
 
 
 const Avatar = styled.div`
@@ -19,6 +21,7 @@ img{
 
 `
 const Profile = styled.div`
+
 margin-left:1000px;
 border-style: groove;
 max-width: 20rem;
@@ -27,9 +30,18 @@ background-color: rgba(38, 39, 54, 0.5)
 
 `
 const Options = styled.div`
+
+width:250px;
 margin-left:1000px;
+display:flex;
+justify-content:space-around
 
-
+.buttons{
+    border-radius:10%;
+    border-style: groove;
+    
+    
+}
 
 `
 const WholePage = styled.div`
@@ -115,45 +127,51 @@ class Dog extends Component {
         return this.fields.map((name) => {
             if (name === "image") {
                 return (
-                    <Avatar>
-                        <img src={this.state.dog[name]} alt="" />
-                        <div>
-                            {this.renderForm(name)}
-                        </div>
-                    </Avatar>
+                    <div>
+                        <Avatar>
+                            <img src={this.state.dog[name]} alt="" />
+                            <div>
+                                {this.renderForm(name)}
+                            </div>
+                        </Avatar>
+                    </div>
+
                 )
             }
             return (
-                <Profile>
-                    <h4>{name.toUpperCase()}: {this.state.dog[name]}</h4>
-                    {this.renderForm(name)}
-                </Profile>
+                <div>
+                    <Profile>
+                        <h4>{name.toUpperCase()}: {this.state.dog[name]}</h4>
+                        {this.renderForm(name)}
+                    </Profile>
+                </div>
+
             )
         })
     }
     render() {
         return (
-          
-               
-                 <Route
-                render={({ history }) => {
-                    return (
-                        <div>
-                            {this.renderFields()}
-                            <Options>
-                                <button onClick={() => this.deleteDog(this.dogId, history)}>Delete</button>
-                                <button onClick={this.handleClick}>
-                                    {this.state.showEditForm ? 'Done' : 'Edit'}
-                                </button>
-                                <button><Link to={`/dogs/${this.dogId}/dates`}>Available Dates</Link> </button>
-                            </Options>
-                        </div>
-                    );
-                }}
-            />
 
-           
-           
+            <WholePage>
+                <Route
+                    render={({ history }) => {
+                        return (
+                            <div>
+                                {this.renderFields()}
+                                <Options>
+                                  
+                                    
+                                    <Button color="danger" onClick={() => this.deleteDog(this.dogId, history)}>Delete</Button>
+                                    <Button color="secondary" onClick={this.handleClick}>
+                                        {this.state.showEditForm ? 'Done' : 'Edit'}
+                                    </Button >
+                                    <Button color="secondary"><Link to={`/dogs/${this.dogId}/dates`}>Available Dates</Link> </Button>
+                                </Options>
+                            </div>
+                        );
+                    }}
+                />
+            </WholePage>
         );
     }
 }
