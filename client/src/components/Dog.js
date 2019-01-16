@@ -31,18 +31,14 @@ background-color: rgba(38, 39, 54, 0.5)
 `
 const Options = styled.div`
 
-width:250px;
+width:400px;
 margin-left:1000px;
 display:flex;
-justify-content:space-around
+justify-content:space-evenly
 
-.buttons{
-    border-radius:10%;
-    border-style: groove;
-    
-    
+h5{
+    color: white;
 }
-
 `
 const WholePage = styled.div`
 display: grid;
@@ -161,11 +157,11 @@ class Dog extends Component {
                                 <Options>
                                   
                                     
-                                    <Button color="danger" onClick={() => this.deleteDog(this.dogId, history)}>Delete</Button>
+                                    <Button color="danger" onClick={() => this.deleteDog(this.dogId, history)}><h5>Delete</h5></Button>
                                     <Button color="secondary" onClick={this.handleClick}>
-                                        {this.state.showEditForm ? 'Done' : 'Edit'}
+                                       {this.state.showEditForm ? <h5>Done</h5> : <h5>'Edit'</h5>}
                                     </Button >
-                                    <Button color="secondary"><Link to={`/dogs/${this.dogId}/dates`}>Available Dates</Link> </Button>
+                                    <Button color="secondary"><Link to={`/dogs/${this.dogId}/dates`}><h5>Dates</h5></Link> </Button>
                                 </Options>
                             </div>
                         );
