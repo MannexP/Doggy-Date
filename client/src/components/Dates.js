@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
-import { Button } from 'react-materialize'
+// import { Button } from 'react-materialize'
+import { Card, Button, CardTitle, CardText } from 'reactstrap';
 
 const Dates = styled.div`
   display: flex;
@@ -69,7 +70,7 @@ class DatesPage extends Component {
       date: "Date ",
       location: "Location",
       duration: "Member"
-   
+
 
     }
     axios.post(`/api/dogs/${dogId}/dates`, payload).then(res => {
@@ -119,7 +120,7 @@ class DatesPage extends Component {
 
         <Buttons>
           <PostADate onClick={this.handleCreateNewDate}>
-          <Button floating large className='red' waves='light' icon='add' />
+            <Button floating large className='red' waves='light' icon='add' />
             Post A Date
         </PostADate>
         </Buttons>
@@ -131,32 +132,27 @@ class DatesPage extends Component {
               return this.handleDelete(date._id)
             }
             return (
+
               <Dates>
-                <textarea
-                  onBlur={() => this.handleUpdate(date._id)}
-                  onChange={(event) => this.handleChange(event, date._id)}
-                  name="date"
-                  value={date.date}
-                />
-                <textarea
-                  onBlur={() => this.handleUpdate(date._id)}
-                  onChange={(event) => this.handleChange(event, date._id)}
-                  name="location"
-                  value={date.location}
-                />
-                <textarea
-                  onBlur={() => this.handleUpdate(date._id)}
-                  onChange={(event) => this.handleChange(event, date._id)}
-                  name="duration"
-                  value={date.duration}
-                />   
-                <textarea
-                  onBlur={() => this.handleUpdate(date._id)}
-                  onChange={(event) => this.handleChange(event, date._id)}
-                  name="member"
-                  value={date.member}
-                />     
-              <button onClick={deleteDate}>Delete</button>
+                <div>
+                  <Card body>
+
+
+                    <CardText>
+                      <textarea
+                        onBlur={() => this.handleUpdate(date._id)}
+                        onChange={(event) => this.handleChange(event, date._id)}
+                        name="member"
+                        value={date.member}
+                      />
+                      <CardTitle></CardTitle>
+                    </CardText>
+
+                    <Button onClick={deleteDate}>Delete</Button>
+                  </Card>
+
+
+                </div>
               </Dates>
             )
           })}
