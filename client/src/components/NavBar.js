@@ -11,9 +11,11 @@ const NavBarStyles = styled.div`
   height: 8rem;
   h3{
     font-size: 4rem;
+    font-weight:lighter
   }
   h5{
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: lighter;
   }
   
   a {
