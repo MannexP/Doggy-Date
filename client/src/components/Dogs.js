@@ -9,7 +9,7 @@ const CardStyle = styled.div`
 .card {
     width:25rem;
     max-width:40rem; 
-    background: #8588A1; 
+    background: #5B5C68;
     height: 35rem;
    h4, h3{
        color: white;
