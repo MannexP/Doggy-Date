@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import mainTheme2 from '../images/dogsPlay2.jpg';
+import mainTheme2 from '../images/dogsPlay4.jpg';
 
 
 
 const MainTheme2 = styled.div`
   position: relative;
-  display:flex;
-  flex-wrap:wrap;
-  flex-direction: column;
+  
 
   .text-block {
   position: absolute;
