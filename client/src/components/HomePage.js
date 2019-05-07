@@ -6,6 +6,7 @@ import mainTheme3 from '../images/dogsPlay3.jpg';
 import mainTheme4 from '../images/dogsPlay4.jpg';
 import mainTheme5 from '../images/dogsPlay5.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { deprecate } from 'util';
 
 
 const MainTheme = styled.div`
@@ -35,14 +36,14 @@ h4{
 class HomePage extends Component {
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <MainTheme>
                     <img src={mainTheme} alt="" />
                     <div className="text-block">
                         <h4>Nature's best friend needs a best friend too</h4>
                     </div>
                 </MainTheme>      
-            </div>   
+            </React.Fragment>   
 
 
 

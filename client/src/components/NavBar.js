@@ -38,7 +38,7 @@ class NavBar extends Component {
   render() {
     return (
       <NavBarStyles id="nav-container" className="some-class">
-        <Link to="/"><h3>Doggy Dates</h3></Link>
+        <Link to="/"><h3>Dog Date</h3></Link>
         
       
         <div className="right">
