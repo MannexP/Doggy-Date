@@ -5,25 +5,13 @@ import mainTheme2 from '../images/heroTheme.jpg';
 
 
 const FormStyles = styled.div`
-h1{
-  margin-left: 25px;
-  margin-top:50px;
-}
-.text-block{
-display: flex;
-justify-content: center;
-width: 350px;
-margin: 0;
-padding: 10px;
+border:2px solid black;
 background: #f4f7f8;
-border-radius: 8px;
-margin-left: 300px;
-margin-top: 20px;
-
+width:35vw;
+height:70vh;
+margin-top:10rem;
+border-radius:10px;
 }
-
-
-
 `
 
 const ButtonStyles = styled.div`
@@ -41,6 +29,17 @@ const ButtonStyles = styled.div`
     margin-top: 50px;
 }
 `
+
+const Container = styled.div`
+background: black;
+height:100vh;
+display:flex;
+justify-content:center;
+
+`
+
+
+
 
 
 class SignUp extends Component {
@@ -73,12 +72,10 @@ class SignUp extends Component {
   }
   render() {
     return (
-     
+      <Container>
         <FormStyles>
-       
-    
           <form onSubmit={this.handleSubmit}>           
-              <h1>Sign Up</h1>
+              <h1>Create Account</h1>
               <div className="text-block">
                 <label htmlFor="name">Name </label>
                 <input onChange={this.handleChange} value={this.state.newDog.name} type="text" name="name" />
@@ -111,9 +108,9 @@ class SignUp extends Component {
                 <button className="text-button" type="submit">Sign Up</button>
               </ButtonStyles>
             </form>
-        
         </FormStyles>
-     
+      </Container>
+
     );
   }
 }

@@ -59,15 +59,14 @@ const HeroStyles = styled.div`
 
   .nav-text {
     position: absolute;
-    top: 20px;
-    right: 16px;
+    top: 30px;
+    right: 100px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
   h5 {
-    color: #ffffff;
-    padding: 1rem 5rem;
+    padding: 1rem 4rem;
     font-weight: 300;
   }
 `;
@@ -95,13 +94,3 @@ class Hero extends Component {
 
 export default Hero;
 
-{
-  /* <NavBarStyles id="nav-container" className="some-class">
-      
-        
-      
-        <div className="right">
-        
-        </div>       
-      </NavBarStyles> */
-}
