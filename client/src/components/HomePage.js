@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import HeroTheme from '../images/heroTheme.jpg';
+import HeroTheme from '../images/Daug-splash.jpg';
 
 
 const NavBarStyles = styled.div`
@@ -34,18 +34,19 @@ const NavBarStyles = styled.div`
     justify-content: space-around;
   }
 `
+
 const HeroStyles = styled.div`
 background-color:black;
-height:90vh;
+height:100vh;
 
 img{
   width:100vw;
-  height:90vh;
-  background-color:black;
+  height:100vh;
+  
  
 }
-.banner{
-  opacity:0.6;
+.splash{
+  opacity:0.9;
 }
 
 `
@@ -55,9 +56,9 @@ class Hero extends Component {
   render() {
     return (
       <HeroStyles>
-        <img class="banner" src={HeroTheme} alt="herotheme" />
+        <img class="splash" src={HeroTheme} alt="herotheme" />
 
-        
+
         {/* <NavBarStyles id="nav-container" className="some-class">
         <Link to="/"><h3>Dog Date</h3></Link>
         
