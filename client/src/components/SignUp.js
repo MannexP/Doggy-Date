@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
-import mainTheme2 from '../images/dogsPlay2.jpg';
+import mainTheme2 from '../images/heroTheme.jpg';
 
 
 const FormStyles = styled.div`

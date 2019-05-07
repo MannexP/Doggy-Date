@@ -1,51 +1,77 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import mainTheme from '../images/dogsPlay.jpg';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { deprecate } from 'util';
+import HeroTheme from '../images/heroTheme.jpg';
 
 
-const MainTheme = styled.div`
-  position: relative;
-
-  .text-block {
+const NavBarStyles = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:blue;
   height: 8rem;
-  width: 94rem;
-  position: absolute;
-  bottom: 8rem;
-  right: 20px;
-  background-color: grey;
-  opacity: .6;
-  border-radius: 2%;
-  color: white;
-  padding-left: 1rem;
-  padding-top: 1em;
+  h3{
+    font-size: 4rem;
+    font-weight:lighter
+  }
+  h5{
+    font-size: 2rem;
+    font-weight: lighter;
+  }
   
-  
-  margin-left: 2rem;
+  a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: white;
+    &:active {
+      color: red;
+    }
+  }
+
+  .right {
+    width: 15vw;
+    display: flex;
+    justify-content: space-around;
+  }
+`
+const HeroStyles = styled.div`
+background-color:black;
+height:90vh;
+
+img{
+  width:100vw;
+  height:90vh;
+  background-color:black;
  
 }
-h4{
-    font-size: 5rem;
+.banner{
+  opacity:0.6;
 }
+
 `
-class HomePage extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <MainTheme>
-                    <img src={mainTheme} alt="" />
-                    <div className="text-block">
-                        <h4>Nature's best friend needs a best friend too</h4>
-                    </div>
-                </MainTheme>      
-            </React.Fragment>   
 
 
+class Hero extends Component {
+  render() {
+    return (
+      <HeroStyles>
+        <img class="banner" src={HeroTheme} alt="herotheme" />
 
-
-        );
-    }
+        
+        {/* <NavBarStyles id="nav-container" className="some-class">
+        <Link to="/"><h3>Dog Date</h3></Link>
+        
+      
+        <div className="right">
+          <Link to="/login"><h5>Log In</h5></Link>
+          <Link to="/signup"><h5>Sign Ups</h5></Link>
+        </div>       
+      </NavBarStyles> */}
+      </HeroStyles>
+      
+      
+    );
+  }
 }
-export default HomePage;
+
+export default Hero;

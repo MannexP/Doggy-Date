@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
 import { Card, CardTitle } from 'react-materialize'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 
 const CardStyle = styled.div` 
