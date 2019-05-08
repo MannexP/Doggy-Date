@@ -4,8 +4,7 @@ import styled from "styled-components";
 import HeroTheme from "../images/Daug-splash.jpg";
 
 const HeroStyles = styled.div`
-  .NavBar {
-  }
+  
   * {
     color: #ffffff;
   }
@@ -31,27 +30,27 @@ const HeroStyles = styled.div`
     position: absolute;
     top: 30px;
     right: 100px;
-  }
-  .nav h5 {
-    padding: 1rem 3rem;
-    font-weight: 300;
-  }
-
-  /* .nav-text {
-    position: absolute;
-    top: 30px;
-    right: 100px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
   }
   h5 {
     padding: 1rem 3rem;
     font-weight: 300;
-  } */
+  }
+
+.hero{
+  position:absolute;
+  top:70%;
+  left:10%;
+
+}
+
+  
 `;
 
-class Hero extends Component {
+class HomePage extends Component {
   render() {
     return (
       <HeroStyles>
@@ -69,25 +68,13 @@ class Hero extends Component {
             </Link>
           </div>
         </div>
+        <div className="hero">
+          <h2>We help find man's best friend, a best friend.</h2>
+        </div>
       </HeroStyles>
     );
   }
 }
 
-export default Hero;
+export default HomePage;
 
-{
-  /* <div className="NavBar">
-  <Link class="logo" to="/">
-    <h3>Daüg Date</h3>
-  </Link>
-  <div className="nav-text">
-    <Link to="/login">
-      <h5>Log In</h5>
-    </Link>
-    <Link to="/signup">
-      <h5>Sign Up</h5>
-    </Link>
-  </div>
-</div>; */
-}
