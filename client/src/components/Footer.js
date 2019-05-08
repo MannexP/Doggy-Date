@@ -7,7 +7,7 @@ const FootBar = styled.div`
 display:flex;
 justify-content: flex-end;
 .navbar {
-  background-color: #28282B;
+  background-color: black;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -17,7 +17,7 @@ justify-content: flex-end;
       
       margin-right: 1rem;
       margin-top: 1rem;
-      color: white;
+      color: green;
       font-weight: lighter;
       margin-left:156rem;
   }

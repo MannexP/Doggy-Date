@@ -5,13 +5,12 @@ import mainTheme2 from '../images/heroTheme.jpg';
 
 
 const FormStyles = styled.div`
-border:2px solid black;
 background: #f4f7f8;
+opacity:0.5;
 width:35vw;
 height:70vh;
 margin-top:10rem;
 border-radius:10px;
-}
 `
 
 const ButtonStyles = styled.div`
@@ -31,11 +30,10 @@ const ButtonStyles = styled.div`
 `
 
 const Container = styled.div`
-background: black;
+background: #ffffff;
 height:100vh;
 display:flex;
 justify-content:center;
-
 `
 
 
