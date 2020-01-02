@@ -12,7 +12,6 @@ class Footer extends Component {
            
                     <div className="navbar" id="myNavbar">
                         <h5>Copyright © 2019</h5>
-            
                     </div>
                   
             </div>
