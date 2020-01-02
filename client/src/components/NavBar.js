@@ -3,41 +3,45 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 
-const NavBarStyles = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background:#28282B;
-  height: 8rem;
-  h3{
-    font-size: 4rem;
-    font-weight:lighter
-  }
-  h5{
-    font-size: 2rem;
-    font-weight: lighter;
-  }
+// const NavBarStyles = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   background:#28282B;
+//   height: 8rem;
+//   h3{
+//     font-size: 4rem;
+//     font-weight:lighter
+//   }
+//   h5{
+//     font-size: 2rem;
+//     font-weight: lighter;
+//   }
   
-  a {
-    text-decoration: none;
-    padding-left: 10px;
-    color: white;
-    &:active {
-      color: red;
-    }
-  }
+//   a {
+//     text-decoration: none;
+//     padding-left: 10px;
+//     color: white;
+//     &:active {
+//       color: red;
+//     }
+//   }
 
-  .right {
-    width: 15vw;
-    display: flex;
-    justify-content: space-around;
-  }
-`
+//   .right {
+//     width: 15vw;
+//     display: flex;
+//     justify-content: space-around;
+//   }
+// `
 
 class NavBar extends Component {
   render() {
     return (
-      <NavBarStyles id="nav-container" className="some-class">
+      <div>
+
+   
+
+      {/* // <NavBarStyles id="nav-container" className="some-class"> */}
         <Link to="/"><h3>Dog Date</h3></Link>
         
       
@@ -45,7 +49,8 @@ class NavBar extends Component {
           <Link to="/login"><h5>Log In</h5></Link>
           <Link to="/signup"><h5>Sign Up</h5></Link>
         </div>       
-      </NavBarStyles>
+      {/* // </NavBarStyles> */}
+      </div>
     );
   }
 }
